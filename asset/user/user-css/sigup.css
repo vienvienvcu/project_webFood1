@@ -1,0 +1,280 @@
+/* =====================GOOGLE FRONTS============================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* ========================VARIABLE========================== */
+:root{
+    --green :#41B06E;
+    --black: #141E46;
+    --light-color: #666;
+    --white:#fff;
+    --box-shadow: 0px 8px 24px rgba(0,0,0,.1);
+    --white-alpha-40:rgba(255,255,255,0.40);
+    --white-alpha-25:rgba(255,255,255,0.25);
+    --green-alpha-25:rgba(50,205,50,0.25);
+    --green-alpha-50:rgba(50,205,50,0.50);
+    --backdrop-filter-blur:blur(5px);
+
+}
+
+/* ==================GLOBAL SETTINGS=========================== */
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+* {
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+     outline: none;
+}
+body,
+textarea,
+button,
+input {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+ul li{
+    list-style: none;
+}
+/* custom scrollbar  */
+::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-track{
+    background-color: var(--white);
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--green);
+}
+
+::after,
+::before{
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+section{
+    padding: 60px 8%;
+}
+section:nth-child(even){
+    background-color: #eee;
+}
+
+.title{
+    text-align: center;
+    color: var(--green);
+    font-size: 32px;
+    text-transform: capitalize;
+}
+
+/* =========== USER START================ */
+.user{
+    position: fixed;
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1005;
+    background-color: var(--green-alpha-40);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 16px;
+    backdrop-filter: var(--backdrop-filter-blur);
+    transition: all .8 ease; 
+}
+.user-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--white);
+    text-align: center;
+    width: 500px;
+    height: 750px;
+    padding: 16px 20px;
+    padding-top: 10px;
+    box-shadow: var(--box-shadow);
+    border-radius: 10px;
+}
+.user-container.active{
+    display: none;
+}
+.user h2{
+    color: var(--black);
+    text-transform: capitalize;
+    font-size: 30px;
+    padding-bottom:  16px;
+}
+.close-box #close{
+    position: absolute;
+    color: var(--white);
+    cursor: pointer;
+    padding: 2px;
+    top: 12px;
+    right: 30px;
+    font-size: 42px;
+    padding: 2px;
+    background-color: var(--green);
+    border-radius: 50%;
+    transition: all .4s ease;
+}
+.close-box #close:hover{
+    color: #C40C0C;
+    transform: rotate(90deg);
+}
+.input-control{
+ position: relative;
+}
+.input-control .eye-icon{
+ display: block;
+ position: absolute;
+ font-size: 18px;
+ top: 36%;
+ right: 16px;
+ transform: rotateY(-50%);
+}
+.form{
+    width: 100%;
+}
+.user form input{
+    width: 100%;
+    padding: 18px 20px;
+    border-radius: 4px;
+    border: none;
+    background-color: #eee;
+    border: .5px solid rgba(0,0,0,0.25);
+}
+.user form input::placeholder{
+    font-size: 16px;
+    text-transform: capitalize;
+}
+.user form .button-submit button{
+    width: 100%;
+    padding: 16px 20px;
+    margin-top:  30px;
+    margin-bottom: 5px;
+    text-transform: capitalize;
+    font-size: 17px;
+    background-color: var(--green);
+    border: none;
+    border-radius: 4px;
+    border: .5px solid rgba(0,0,0,0.25);
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--white);
+}
+ form .button-facebook,
+ form .button-google {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+}
+ form .button-facebook {
+    background-color: #008DDA;
+    width: 100%;
+    padding: 10px 20px;
+    margin-top:  30px;
+    margin-bottom: 5px;
+    text-transform: capitalize;
+    font-size: 17px;
+    border: none;
+    border-radius: 4px;
+    border: .5px solid rgba(0,0,0,0.25);
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--white);
+    transition: all .3 ease;
+}
+ form .button-facebook i
+{
+    font-size: 36px;
+}
+ .button-google img{
+    width: 36px;
+}
+ form .button-google {
+    background-color: var(--white);
+    width: 100%;
+    padding: 10px 20px;
+    margin-top:  12px;
+    margin-bottom: 5px;
+    text-transform: capitalize;
+    font-size: 17px;
+    border: none;
+    border-radius: 4px;
+    border: .5px solid rgba(0,0,0,0.25);
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--light-color);
+    transition: all .3 ease;
+}
+ form button:hover,
+ form .button-facebook:hover,
+ form .button-google:hover{
+    border-color: #141E46;
+    transform: scale(1.01);
+}
+form .text {
+    display: flex;
+    width: 100%;
+    gap: 5px;
+    margin-top: 10px;
+    font-size: 16px;
+    justify-content: center;
+    align-items: center;
+}
+hr{
+    margin-top: 20px;
+    opacity: 0.2;
+}
+.user .text a{
+    color: var(--green);  
+}
+.input-control{
+    margin-bottom: 12px;
+}
+.input-control.success{
+    border-color: var(--green);
+}
+.input-control .error ,
+.email-complete{
+    color: #C40C0C;
+    text-align: left;
+    margin-top: 2px;
+    font-size: 12px;
+}
+
+/* ------user complete-------- */
+#register-complete{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+    text-align: center;
+    width: 300px;
+    height: 100px;
+    padding: 16px 20px;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    transition: all .5s ease;
+    position: absolute;
+    gap: 10px;
+    top: 100px;
+    right:-100%;
+}
+#register-complete span{
+    font-size: 23px;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+#register-complete img{
+    width: 50px;
+    font-size: 40px;
+    font-weight: bolder;
+    color: var(--green);
+}
+/* =========== USER END================ */
+

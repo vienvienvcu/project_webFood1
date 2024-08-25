@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="user.css" />
+
+    <!-- ==================LINK BOX ICON======================== -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- ==================LINK SWIPER======================== -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <title>user</title>
+  </head>
+  <body>
+    <!-- =======HEADER START============== -->
+    <header class="header">
+      <div class="header-right">
+        <div class="nav-toggler">
+          <span></span>
+        </div>
+        <a href="#" class="logo" style="white-space: nowrap">
+          <img src="./img/fork.jpg" />food.</a
+        >
+        <nav class="navbar">
+          <ul class="navbar-list">
+            <li><a class="active" href="#home">dashBoard</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header-left">
+        <div class="icons">
+          <ul class="list-icons">
+            <li>
+              <a href="#" id="search-icon"
+                ><i class="bx bx-search-alt-2"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" id="user-icon"><i class="bx bx-user"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <!-- ==================LINK JAVASCRIPT======================== -->
+    <!-- =======USER START===================== -->
+    <div id="user" class="user">
+      <div id="close-box" class="close-box">
+        <i class="bx bx-x" id="close"></i>
+      </div>
+      <div class="user-container">
+        <h2>sign up</h2>
+        <div class="form">
+          <form class="form-user" onsubmit="register(event)">
+            <div class="input-control">
+              <input
+                id="username"
+                type="text"
+                name="name"
+                placeholder="Your name"
+              />
+              <div id="error-name" class="error"></div>
+            </div>
+            <div class="input-control">
+              <input
+                id="email-user"
+                type="text"
+                name="email"
+                placeholder="Your email"
+              />
+              <div id="error-email" class="error"></div>
+              <div class="email-complete"></div>
+            </div>
+            <div class="input-control">
+              <input
+                id="password-user"
+                class="password"
+                type="password"
+                name="password"
+                placeholder="password"
+              />
+              <!-- <i class="fa-solid fa-eye-slash eye-icon"></i> -->
+              <div id="error-password" class="error"></div>
+            </div>
+            <div class="input-control">
+              <input
+                id="password-confirm"
+                class="password"
+                type="password"
+                name="confirmPassword"
+                placeholder="confirm password"
+              />
+              <div id="error-password-confirm" class="error"></div>
+              <i class="fa-solid fa-eye-slash eye-icon"></i>
+              <!-- <i class="fa-solid fa-eye eye-icon"></i> -->
+            </div>
+            <div class="button-submit">
+              <button type="submit" class="login-submit">login</button>
+            </div>
+            <div class="text">
+              <span>Already have a account?</span>
+              <a href="#" id="user-login">Login here</a>
+            </div>
+            <hr />
+            <div class="button-facebook">
+              <i class="bx bxl-facebook-circle"></i>
+              <span>Login with Facebook</span>
+            </div>
+            <div class="button-google">
+              <img src="./img/goole.png" />
+              <span>Login with Google </span>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div id="register-complete" class="user-complete">
+        <span>completed</span>
+        <img src="./img/check.png" />
+      </div>
+    </div>
+    <!-- =======USER END===================== -->
+    <!-- =======LOGIN START===================== -->
+    <div class="login">
+      <div class="login-box">
+        <i class="bx bx-x" id="close"></i>
+      </div>
+      <div class="user-container">
+        <h2>login</h2>
+        <div class="form">
+          <form class="form-user" id="form-user">
+            <!-- <input type="text" name="name" placeholder="Your name"> -->
+            <div class="input-control">
+              <input
+                class="email"
+                type="email"
+                name="email"
+                placeholder="Your email"
+              />
+              <div class="error"></div>
+            </div>
+            <div class="input-control">
+              <input
+                class="password"
+                type="password"
+                name="password"
+                placeholder="password"
+              />
+              <!-- <i class="fa-solid fa-eye "></i> -->
+              <i class="fa-solid fa-eye-slash eye-icon"></i>
+              <div class="error"></div>
+            </div>
+            <div class="forgot-password">
+              <a href="#">Forgot-password?</a>
+            </div>
+            <div class="button-submit">
+              <button type="button" class="login-submit">login</button>
+            </div>
+            <div class="text">
+              <span>Already have a account?</span>
+              <a href="#" id="sign-open">Click here</a>
+            </div>
+            <hr />
+            <div class="button-facebook">
+              <i class="bx bxl-facebook-circle"></i>
+              <span>Login with Facebook</span>
+            </div>
+            <div class="button-google">
+              <img src="./img/goole.png" />
+              <span>Login with Google </span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- =======LOGIN END===================== -->
+
+    <!-- =======HEADER END===================== -->
+
+    <script src="user.js"></script>
+  </body>
+</html>

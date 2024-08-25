@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ==================LINK CSS======================== -->
+    <link rel="stylesheet" href="admin-css/dashboard.css" />
+    <link rel="stylesheet" href="admin-css/login.css" />
+
+    <!-- ==================LINK BOX ICON======================== -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- ==================LINK SWIPER======================== -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <title>admin dashBoard</title>
+  </head>
+  <body>
+    <!-- =======HEADER START============== -->
+    <header class="header">
+      <div class="header-right">
+        <div class="nav-toggler">
+          <span></span>
+        </div>
+        <a href="#" class="logo" style="white-space: nowrap">
+          <img src="./img/fork.jpg" />food.</a
+        >
+        <nav class="navbar">
+          <ul class="navbar-list">
+            <li><a class="active" href="#home">dashBoard</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header-left">
+        <div class="icons">
+          <ul class="list-icons">
+            <li class="input">
+              <input
+                id="input-search"
+                type="text"
+                placeholder="search here..."
+              />
+              <a href="#" id="search-icon"
+                ><i class="bx bx-search-alt-2"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" id="user-icon"><i class="bx bx-user"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <!-- =======HEADER END===================== -->
+    <!-- =======SIDEBAR START===================== -->
+    <section class="sidebar-admin" id="sidebar-admin">
+      <div class="sidebar">
+        <div class="sidebar-title">
+          <i class="bx bxs-dashboard"></i>
+          <a>dashboard</a>
+        </div>
+        <div class="sidebar-title">
+          <i class="bx bxs-edit"></i>
+          <a>user</a>
+        </div>
+        <div class="sidebar-title">
+          <i class="bx bxs-user-account"></i>
+          <a>category</a>
+        </div>
+        <div class="sidebar-title">
+          <i class="bx bxs-bookmark-alt-minus"></i>
+          <a>product</a>
+        </div>
+        <div class="sidebar-title">
+          <i class="bx bx-line-chart"></i>
+          <a>customer</a>
+        </div>
+        <div class="sidebar-title">
+          <i class="bx bxs-chat"></i>
+          <a>messages</a>
+        </div>
+        <div class="sidebar-title">
+          <i class="bx bxs-cog"></i>
+          <a>setting</a>
+        </div>
+        <div class="sidebar-title">
+          <i class="bx bxs-report"></i>
+          <a>reports</a>
+        </div>
+        <div class="sidebar-title logout">
+          <i class="bx bx-log-in"></i>
+          <a>logout</a>
+        </div>
+      </div>
+    </section>
+    <!-- =======SIDEBAR END===================== -->
+    <!-- =======MAIN START===================== -->
+
+    <section class="main">
+      <div class="content-admin">
+        <div class="add-product">
+          <input type="date" class="date" />
+          <button type="submit"><i class="bx bx-plus"></i>add product</button>
+        </div>
+        <div class="boxs">
+          <div class="box">
+            <div class="box-content">
+              <div class="border-img">
+                <img src="img/dothi.png" />
+              </div>
+              <p>total sales</p>
+              <h3>$25,024</h3>
+              <span>last 24 hours</span>
+            </div>
+            <div class="box-img">do thi</div>
+          </div>
+          <div class="box">
+            <div class="box-content">
+              <div class="border-img">
+                <img src="img/dothi.png" />
+              </div>
+              <p>total sales</p>
+              <h3>$25,024</h3>
+              <span>last 24 hours</span>
+            </div>
+            <div class="box-img">do thi</div>
+          </div>
+          <div class="box">
+            <div class="box-content">
+              <div class="border-img">
+                <img src="img/dothi.png" />
+              </div>
+              <p>total sales</p>
+              <h3>$25,024</h3>
+              <span>last 24 hours</span>
+            </div>
+            <div class="box-img">do thi</div>
+          </div>
+        </div>
+      </div>
+      <div class="table-admin">
+        <div class="table">
+          <table>
+            <tr>
+              <th>product name</th>
+              <th>product number</th>
+              <th>card</th>
+              <th>status</th>
+              <th></th>
+            </tr>
+            <tr>
+              <td>pizza</td>
+              <td>123</td>
+              <td>pending</td>
+              <td>detail</td>
+            </tr>
+            <tr>
+              <td>pizza</td>
+              <td>123</td>
+              <td>pending</td>
+              <td>detail</td>
+            </tr>
+            <tr>
+              <td>pizza</td>
+              <td>123</td>
+              <td>pending</td>
+              <td>detail</td>
+            </tr>
+            <tr>
+              <td>pizza</td>
+              <td>123</td>
+              <td>pending</td>
+              <td>detail</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="read-more">read more</div>
+    </section>
+
+    <!-- ==================LINK JAVASCRIPT======================== -->
+    <script src="admin-js/dashboard.js"></script>
+    <script src="admin-js/login.js"></script>
+  </body>
+</html>

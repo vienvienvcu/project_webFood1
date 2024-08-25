@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ==================LINK FONT======================== -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Sofia"
+    />
+    <!-- ==================LINK CSS======================== -->
+    <link rel="stylesheet" href="./user-css/menusdetail.css" />
+    <link rel="stylesheet" href="./user-css/menus.css" />
+
+    <!-- ==================LINK BOX ICON======================== -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- ==================LINK SWIPER======================== -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <title>website about in the food</title>
+  </head>
+  <body>
+    <!-- =======HEADER START============== -->
+    <header class="header">
+      <a href="#" class="logo" style="white-space: nowrap">
+        <img src="./img/fork.jpg" />food.</a
+      >
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <!-- <li><a href="#home">home</a></li> -->
+          <li><a class="active" href="./index.html">home</a></li>
+          <!-- <a href="#home">dishes<i class='bx bxs-chevron-down'></i></a> -->
+          <li><a href="./about.html">about</a></li>
+          <li class="menus">
+            <a href="menus.html">menus<i class="bx bxs-chevron-down"></i></a>
+            <div class="menus-down" id="subMenus">
+              <div class="menus-text">
+                <div class="menus-all"><span>menus</span></div>
+                <img src="./img/menu.png" />
+              </div>
+              <div class="line"></div>
+              <div class="menus-down-box">
+                <a href="#">
+                  <img src="./img/fried-chicken.png" alt="chick-icon" />
+                  <p>fried chicken</p>
+                </a>
+                <a href="#">
+                  <img src="./img/pizza.png" />
+                  <p>pizza</p>
+                </a>
+                <a href="#">
+                  <img src="./img/spaghetti.png" />
+                  <p>spaghetti</p>
+                </a>
+                <a href="#">
+                  <img src="./img/milkshake.png" />
+                  <p>beverage</p>
+                </a>
+                <a href="#">
+                  <img src="./img/boy-girl.png" />
+                  <p>for babies</p>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li><a href="#home">review</a></li>
+          <!-- <a href="#home">order</a> -->
+        </ul>
+      </nav>
+      <div class="icons">
+        <ul class="list-icons">
+          <!-- <li><i class='bx bx-menu' id="menu"></i></li>s -->
+          <li>
+            <a href="#" id="search-icon"><i class="bx bx-search-alt-2"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="bx bxs-heart"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="bx bx-cart-alt"></i></a>
+          </li>
+
+          <li id="list-login">
+            <a href="#" id="user-icon"><i class="bx bx-user"></i></a>
+          </li>
+          <li id="account-user">
+            <a href="#"><i class="bx bxs-user"></i></a>
+          </li>
+          <li id="name-login"></li>
+        </ul>
+      </div>
+      <div class="nav-toggler">
+        <span></span>
+      </div>
+      <!-- --SIG OUT START -->
+      <div class="sigout" id="sigout">
+        <!-- <p>nguyenvien66@gmail.com</p>
+        <h3>Hi,you</h3>
+        <div class="sigout-btn">
+          <button class="" id="btn-add">
+            <i class="bx bxs-plus-circle"></i>
+            <p>Add account</p>
+          </button>
+          <button class="" id="btn-logout">
+            <i class="bx bx-log-in-circle"></i>
+            <p>Sig out</p>
+          </button>
+        </div> -->
+      </div>
+      <!--SIG OUT END-->
+    </header>
+    <!-- =======HEADER END===================== -->
+    <!-- =======SEARCH START===================== -->
+    <form action="" id="search-form">
+      <input
+        type="search"
+        name=""
+        id="search-box"
+        placeholder="search here..."
+      />
+      <label for="search-box" class="bx bx-search-alt-2"></label>
+      <i class="bx bx-x" id="close"></i>
+    </form>
+    <!-- =======SEARCH END===================== -->
+    <!-- =======USER START===================== -->
+    <div id="user" class="user">
+      <div id="close-box" class="close-box">
+        <i class="bx bx-x" id="close"></i>
+      </div>
+      <div class="user-container">
+        <h2>sign up</h2>
+        <div class="form">
+          <form class="form-user" onsubmit="register(event)">
+            <div class="input-control">
+              <input
+                id="name"
+                type="text"
+                name="username"
+                placeholder="Your name"
+              />
+              <div id="error-name" class="error"></div>
+            </div>
+            <div class="input-control">
+              <input
+                id="email-user"
+                type="text"
+                name="email"
+                placeholder="Your email"
+              />
+              <div id="error-email" class="error"></div>
+              <!-- <div class="email-complete"></div> -->
+            </div>
+            <div class="input-control">
+              <input
+                id="password-user"
+                class="password"
+                type="password"
+                name="password"
+                placeholder="password"
+              />
+              <!-- <i class="fa-solid fa-eye-slash eye-icon"></i> -->
+              <div id="error-password" class="error"></div>
+            </div>
+            <div class="input-control">
+              <input
+                id="password-confirm"
+                class="password"
+                type="password"
+                name="confirmPassword"
+                placeholder="confirm password"
+              />
+              <div id="error-password-confirm" class="error"></div>
+              <i class="fa-solid fa-eye-slash eye-icon"></i>
+              <!-- <i class="fa-solid fa-eye eye-icon"></i> -->
+            </div>
+            <div class="button-submit">
+              <button type="submit" class="login-submit">login</button>
+            </div>
+            <div class="text">
+              <span>Already have a account?</span>
+              <a href="#" id="user-login">Login here</a>
+            </div>
+            <hr />
+            <div class="button-facebook">
+              <i class="bx bxl-facebook-circle"></i>
+              <span>Login with Facebook</span>
+            </div>
+            <div class="button-google">
+              <img src="./img/goole.png" />
+              <span>Login with Google </span>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div id="register-complete" class="user-complete">
+        <img src="./img/check.png" />
+        <span>Your work has been saved</span>
+        <h3>Thanks you!</h3>
+      </div>
+    </div>
+    <!-- =======USER END===================== -->
+    <!-- =======LOGIN START===================== -->
+    <div class="login">
+      <div class="login-box">
+        <i class="bx bx-x" id="close"></i>
+      </div>
+      <div class="user-container">
+        <h2>login</h2>
+        <div class="form">
+          <form class="form-user">
+            <!-- <input type="text" name="name" placeholder="Your name"> -->
+            <div class="input-control">
+              <input
+                id="emailLogin"
+                type="email"
+                name="email"
+                placeholder="Your email"
+              />
+              <div class="error"></div>
+            </div>
+            <div class="input-control">
+              <input
+                class="password"
+                id="passwordLogin"
+                type="password"
+                name="password"
+                placeholder="password"
+              />
+              <!-- <i class="fa-solid fa-eye "></i> -->
+              <i class="fa-solid fa-eye-slash eye-icon"></i>
+              <div class="error"></div>
+            </div>
+            <div class="forgot-password">
+              <a href="#">Forgot-password?</a>
+            </div>
+            <div class="button-submit">
+              <button type="button" class="login-submit" id="btn-login">
+                login
+              </button>
+            </div>
+            <div class="text">
+              <span>Already have a account?</span>
+              <a href="#" id="sign-open">Click here</a>
+            </div>
+            <hr />
+            <div class="button-facebook">
+              <i class="bx bxl-facebook-circle"></i>
+              <span>Login with Facebook</span>
+            </div>
+            <div class="button-google">
+              <img src="./img/goole.png" />
+              <span>Login with Google </span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div id="sigout-complete" class="user-complete">
+      <span>Are you sure want to sign out</span>
+      <div class="sigout-complete-btn">
+        <button class="btn" id="btn-yes">yes</button>
+        <button class="btn" id="btn-no">no</button>
+      </div>
+      <h3>Thanks you!</h3>
+    </div>
+
+    <!-- =======LOGIN END===================== -->
+    <!-- =======BANNER MENU START===================== -->
+    <section class="banner-menu">
+      <div class="banner-menu-content">
+        <div class="banner-menu-img">
+          <div class="banner-menu-text">
+            <div class="title-menu">
+              <h1>best food in your city</h1>
+            </div>
+            <div class="link">
+              <a href="./index.html">Home</a>
+              <i class="bx bx-chevrons-right"></i>
+              <a href="./about.html">About</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- =======BANNER MENU END===================== -->
+    <!-- =======DETAIL MENU START===================== -->
+    <section class="section-detail" id="section-detail">
+      <div class="pizza-name-detail">
+        <a><h1>Pizza Siêu Topping Xúc Xích Ý</h1></a>
+      </div>
+      <div class="card-detail">
+        <div class="card-detail-left">
+          <div class="img-big">
+            <img src="./img/pizza-food1.jpeg" id="images" />
+          </div>
+          <div class="img-small">
+            <img src="./img/pizza1.jpeg" alt="" onclick="clickImg(this)" />
+            <img src="./img/pizza2.jpeg" alt="" onclick="clickImg(this)" />
+            <img src="./img/pizza4.jpeg" alt="" onclick="clickImg(this)" />
+          </div>
+          <span class="price-pizza-detail">160.000VND</span>
+          <div class="button-number">
+            <i class="bx bx-plus"></i>
+            <p>1</p>
+            <i class="bx bx-minus"></i>
+          </div>
+        </div>
+
+        <div class="card-detail-right">
+          <h3>Chọn kích thước:</h3>
+          <p>( Cỡ M: 6 miếng 22cm | Cỡ L: 8 miếng 30cm )</p>
+          <div class="choose-size-detail">
+            <div class="size-detail">
+              <label for="price">M:</label>
+              <p>160.00vnd</p>
+              <input type="radio" />
+            </div>
+            <div class="size-detail">
+              <label for="price">L:</label>
+              <p>210.000vnd</p>
+              <input type="radio" />
+            </div>
+          </div>
+          <h3>Chọn đế</h3>
+          <div class="choose-size-detail">
+            <div class="size-detail">
+              <label for="price">Mỏng:</label>
+              <input type="radio" />
+            </div>
+            <div class="size-detail">
+              <label for="price">Dày:</label>
+              <input type="radio" />
+            </div>
+          </div>
+          <h3>Chọn Thêm</h3>
+          <div class="choose-size-detail">
+            <div class="size-detail">
+              <label for="price">Phomat:</label>
+              <p>30vnd</p>
+              <input type="checkbox" />
+            </div>
+            <div class="size-detail">
+              <label for="price">Jambong:</label>
+              <p>30vnd</p>
+              <input type="checkbox" />
+            </div>
+            <div class="size-detail">
+              <label for="price">Ngô:</label>
+              <p>30vnd</p>
+              <input type="checkbox" />
+            </div>
+          </div>
+
+          <div class="message-detail">
+            <textarea rows="5" placeholder="ghi chu"></textarea>
+          </div>
+          <div class="pizza-detail">
+            <a><button class="btn">order now</button></a>
+          </div>
+        </div>
+      </div>
+      <div class="text-detail">
+        <p>Xốt Cà Chua, Phô Mai Mozzarella, Xúc Xích Pepperoni. Tăng 50%...</p>
+      </div>
+    </section>
+    <!-- section-ingredients start -->
+    <section class="section-ingredients">
+      <h1 class="title">ingredients</h1>
+      <div class="ingredients-product">
+        <div class="ingredients-product-left">
+          <h3>Pizza Crust for Breadmaker</h3>
+          <p>Cornmeal</p>
+          <h3>1/2 pound hot Italian sausage</h3>
+          <p>2 ounces pepperoni, sliced</p>
+          <h3>1 cup pizza sauce</h3>
+          <p>1/2 teaspoon pizza seasoning</p>
+          <h3>4 thin slices from large onion</h3>
+          <p>1 cup diced red and/or green bell pepper</p>
+          <h3>1 can (2.25 ounces) sliced black olives, draineds</h3>
+          <p>1/2 cup sliced hot banana peppers</p>
+          <h3>2 cups shredded mozzarella cheese</h3>
+          <p>1/4 cup grated parmesan cheese</p>
+        </div>
+        <div class="ingredients-product-right">
+          <div class="img-detail1">
+            <img src="./img/pizza-detail.jpeg" />
+          </div>
+          <div class="img-detail2">
+            <img src="./img/pizza-detail2.jpeg" />
+          </div>
+        </div>
+      </div>
+      <!-- section-ingredients end -->
+    </section>
+    <!-- related products start-->
+    <section class="relate-products">
+      <h1 class="title">relate products</h1>
+      <div class="container-pizza" id="container-pizza-detail">
+        <!-- <div class="pizza-items">
+          <div class="pizza-item">
+            <div class="img-pizza">
+              <img src="./img/pizza-food5.jpeg" />
+            </div>
+            <div class="icon-heart">
+              <i class="bx bxs-heart"></i>
+            </div>
+            <div class="pizza-dish-name">
+              <a href="./menusdetail.html"
+                ><h3>Pizza Siêu Topping Xúc Xích Ý</h3></a
+              >
+            </div>
+            <div class="pizza-text">
+              <p>
+                Xốt Cà Chua, Phô Mai Mozzarella, Xúc Xích Pepperoni. Tăng 50%...
+              </p>
+            </div>
+            <div class="price-pizza">
+              <div class="size">
+                <span for="price">M:</span>
+                <p>160.00vnd</p>
+              </div>
+              <div class="size">
+                <span for="price">L:</span>
+                <p>210.000vnd</p>
+              </div>
+            </div>
+            <button class="view-card-pizza btn">Add To Card</button>
+          </div>
+        </div> -->
+      </div>
+    </section>
+    <!-- related products end -->
+
+    <!-- =======DETAIL MENU END===================== -->
+
+    <!-- =======FOOTER START===================== -->
+    <section class="contact-section" id="contact">
+      <h1 class="title">contact me</h1>
+      <div class="row">
+        <div class="contact-form">
+          <form>
+            <!-- <div class="row"> -->
+            <div class="input-group">
+              <input type="text" placeholder="name" class="input-control" />
+            </div>
+            <div class="input-group">
+              <input type="text" placeholder="mail" class="input-control" />
+            </div>
+            <div class="input-group">
+              <input type="text" placeholder="subject" class="input-control" />
+            </div>
+            <div class="input-group">
+              <textarea placeholder="messager" class="input-control"></textarea>
+            </div>
+            <div class="submit-btn">
+              <button type="submit" class="btn">sent message</button>
+            </div>
+            <!-- </div> -->
+          </form>
+        </div>
+        <div class="contact-info">
+          <div class="contact-info-item">
+            <div class="info-food">
+              <i class="bx bx-calendar"></i>
+              <h3>open time</h3>
+            </div>
+            <p>9h00am : 22h00pm</p>
+          </div>
+          <div class="contact-info-item">
+            <div class="info-food">
+              <i class="bx bxs-store-alt"></i>
+              <h3>address</h3>
+            </div>
+            <p>Cay-Long Xuyen-Binh Giang-Hai Duong</p>
+          </div>
+          <div class="contact-info-item">
+            <div class="info-food">
+              <i class="bx bxs-envelope"></i>
+              <h3>Email</h3>
+            </div>
+            <p>food662024@gmail.com</p>
+          </div>
+          <div class="contact-info-item">
+            <div class="info-food">
+              <i class="bx bxs-phone"></i>
+              <h3>hotline</h3>
+            </div>
+            <p>080********</p>
+          </div>
+          <div class="contact-info-item">
+            <div class="info-food">
+              <i class="bx bxl-meta"></i>
+              <h3>follow me</h3>
+            </div>
+            <div class="social-links">
+              <a href="#"><i class="bx bxl-facebook"></i></a>
+              <a href="#"><i class="bx bxl-instagram"></i></a>
+              <a href="#"><i class="bx bxl-twitter"></i></a>
+              <a href="#"><i class="bx bxl-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- =======FOOTER END===================== -->
+    <!-- ======= POPUP pizza ===================== -->
+
+    <div class="popup-pizza">
+      <div class="logout-box">
+        <i class="bx bx-x" id="close-pizza"></i>
+      </div>
+      <div class="popup-pizza-detail">
+        <div class="head-title">
+          <h2>chọn sản phẩm</h2>
+        </div>
+        <div class="line"></div>
+        <div class="popup-box">
+          <div class="box-left">
+            <div class="pizza-name">
+              <a><h3>Pizza Siêu Topping Xúc Xích Ý</h3></a>
+            </div>
+            <div class="pizza-text-popup">
+              <p>
+                Gà rán Nhật Bản, hay còn gọi là gà karaage, rất phổ biến ở Nhật
+                Bản,...
+              </p>
+            </div>
+            <div class="popup-pizza-img">
+              <img src="./img/pizza-food1.jpeg" />
+            </div>
+            <span class="price-pizza-pop">160.000</span>
+            <div class="button-number">
+              <i class="bx bx-plus"></i>
+              <p>1</p>
+              <i class="bx bx-minus"></i>
+            </div>
+          </div>
+          <div class="box-right">
+            <h3>Chọn kích thước:</h3>
+            <p>( Cỡ M: 6 miếng 22cm | Cỡ L: 8 miếng 30cm )</p>
+            <div class="choose-size">
+              <div class="size">
+                <label for="price">M:</label>
+                <p>160.00vnd</p>
+                <input type="radio" />
+              </div>
+              <div class="size">
+                <label for="price">L:</label>
+                <p>210.000vnd</p>
+                <input type="radio" />
+              </div>
+            </div>
+            <h3>Chọn đế</h3>
+            <div class="choose-size">
+              <div class="size">
+                <label for="price">Mỏng:</label>
+                <input type="radio" />
+              </div>
+              <div class="size">
+                <label for="price">Dày:</label>
+                <input type="radio" />
+              </div>
+            </div>
+            <h3>Chọn Thêm</h3>
+            <div class="choose-size">
+              <div class="size">
+                <label for="price">Phomat:</label>
+                <p>30vnd</p>
+                <input type="checkbox" />
+              </div>
+              <div class="size">
+                <label for="price">Jambong:</label>
+                <p>30vnd</p>
+                <input type="checkbox" />
+              </div>
+              <div class="size">
+                <label for="price">Ngô:</label>
+                <p>30vnd</p>
+                <input type="checkbox" />
+              </div>
+            </div>
+
+            <div class="message">
+              <textarea rows="3" placeholder="ghi chu"></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="pizza-btn">
+          <a><button class="btn">order now</button></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================LINK SWIPER======================== -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- ==================LINK JAVASCRIPT======================== -->
+    <script src="./user-js/menudetail.js"></script>
+    <script src="./user-js/menus.js"></script>
+    <script src="./user-js/sigup.js"></script>
+  </body>
+</html>
